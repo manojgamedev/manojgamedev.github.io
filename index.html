@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manoj Gaming Studio | Official Portfolio</title>
     <style>
-        /* Global Reset & Fonts */
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +12,6 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
-        /* Animated Gaming Background */
         body {
             background: linear-gradient(-45deg, #0f0c29, #302b63, #0f0c29, #050505);
             background-size: 400% 400%;
@@ -28,7 +26,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Grid Overlay for Texture */
         .bg-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -39,7 +36,6 @@
             z-index: -1;
         }
 
-        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: space-between;
@@ -81,7 +77,6 @@
             box-shadow: 0 0 15px #00e6ff;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -105,7 +100,6 @@
             line-height: 1.6;
         }
 
-        /* Projects Section - 3 Column Grid */
         .projects-wrapper {
             max-width: 1300px;
             margin: 0 auto;
@@ -131,7 +125,6 @@
             gap: 40px;
         }
 
-        /* Project Cards */
         .project-card {
             background: rgba(15, 15, 20, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -163,10 +156,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.2em;
-            color: #555;
+            overflow: hidden;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            font-weight: bold;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-details {
@@ -184,7 +181,6 @@
             line-height: 1.5;
         }
 
-        /* Login Modal / Popup */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -266,7 +262,6 @@
             background: #fff;
         }
 
-        /* Responsive */
         @media (max-width: 1024px) {
             .projects-grid { grid-template-columns: repeat(2, 1fr); }
             .hero h1 { font-size: 3.5em; }
@@ -281,74 +276,72 @@
 </head>
 <body>
 
-    <!-- Background Grid Texture -->
     <div class="bg-overlay"></div>
 
-    <!-- Navbar -->
     <nav>
         <div class="logo">Manoj <span>Gaming Studio</span></div>
         <button class="login-btn" onclick="openLogin()">Login</button>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1>Welcome to Game Zone</h1>
         <p>Independent Game Developer focused on 2D Pixel Art, Action Mechanics, and Immersive Gameplay Experiences.</p>
     </section>
 
-    <!-- Projects Section (3-Column Grid) -->
     <section class="projects-wrapper">
         <h2 class="section-title">My Projects</h2>
         
         <div class="projects-grid">
-            <!-- Row 1, Item 1 -->
+            <!-- Shadow Strike Featured Project with Thumbnail -->
             <div class="project-card">
-                <div class="project-image">[ Man of Village Image ]</div>
+                <div class="project-image">
+                    <img src="shadow-thumb.png" alt="Shadow Strike">
+                </div>
                 <div class="project-details">
-                    <h2>Man of Village</h2>
-                    <p>An immersive 2D pixel art adventure game developed in Godot Engine. Features deep storytelling and dynamic environment interactions.</p>
+                    <h2>Shadow Strike</h2>
+                    <p>Ultimate 15 Stage Master Edition featuring intense combat mechanics, custom audio design, and smooth animations.</p>
                 </div>
             </div>
 
-            <!-- Row 1, Item 2 -->
+            <!-- Project 2 -->
             <div class="project-card">
-                <div class="project-image">[ Bamboo Panda Image ]</div>
+                <div class="project-image" style="color: #555; font-weight: bold;">[ Bamboo Panda Image ]</div>
                 <div class="project-details">
                     <h2>Bamboo Panda</h2>
                     <p>A fast-paced action game showcasing intense martial arts mechanics, precise slicing animations, and custom audio design.</p>
                 </div>
             </div>
 
-            <!-- Row 1, Item 3 -->
+            <!-- Project 3 -->
             <div class="project-card">
-                <div class="project-image">[ Pixel Bot Image ]</div>
+                <div class="project-image" style="color: #555; font-weight: bold;">[ Pixel Bot Image ]</div>
                 <div class="project-details">
                     <h2>Pixel Bot</h2>
                     <p>Custom Python automation scripts built to streamline pixel art generation, sprite tagging, and repetitve drawing tasks.</p>
                 </div>
             </div>
             
-            <!-- Row 2, Item 1 -->
+            <!-- Project 4 -->
             <div class="project-card">
-                <div class="project-image">[ Combat Prototype Image ]</div>
+                <div class="project-image" style="color: #555; font-weight: bold;">[ Combat Prototype Image ]</div>
                 <div class="project-details">
                     <h2>Combat Prototype</h2>
                     <p>Testing grounds for advanced hitboxes, weapon mechanics, and smooth transitioning sprite sheet animations.</p>
                 </div>
             </div>
 
-            <!-- Row 2, Item 2 -->
+            <!-- Project 5 -->
             <div class="project-card">
-                <div class="project-image">[ Dev Vlogs Image ]</div>
+                <div class="project-image" style="color: #555; font-weight: bold;">[ Dev Vlogs Image ]</div>
                 <div class="project-details">
                     <h2>Dev Vlogs</h2>
                     <p>Behind-the-scenes video logs documenting the step-by-step game development process and engine workflows.</p>
                 </div>
             </div>
 
-            <!-- Row 2, Item 3 -->
+            <!-- Project 6 -->
             <div class="project-card">
-                <div class="project-image">[ Utility Tools Image ]</div>
+                <div class="project-image" style="color: #555; font-weight: bold;">[ Utility Tools Image ]</div>
                 <div class="project-details">
                     <h2>Python Utilities</h2>
                     <p>Open-source tools including a Bulk Email Script for effective communication and workflow management.</p>
@@ -357,7 +350,6 @@
         </div>
     </section>
 
-    <!-- Professional Login Modal -->
     <div class="modal-overlay" id="loginModal">
         <div class="login-box">
             <span class="close-btn" onclick="closeLogin()">&times;</span>
@@ -374,9 +366,7 @@
         </div>
     </div>
 
-    <!-- Scripts for Animation & Login Popup -->
     <script>
-        // Scroll Animation Logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -385,14 +375,12 @@
             });
         }, { threshold: 0.1 });
 
-        // Add varying transition delays for a wave effect on scroll
         const cards = document.querySelectorAll('.project-card');
         cards.forEach((card, index) => {
             card.style.transitionDelay = `${(index % 3) * 0.15}s`;
             observer.observe(card);
         });
 
-        // Login Modal Logic
         function openLogin() {
             document.getElementById('loginModal').classList.add('active');
         }
@@ -402,7 +390,7 @@
         }
 
         function fakeLogin() {
-            alert("Connecting to database... (Note: Backend integration required for real login!)");
+            alert("Connecting to database...");
             closeLogin();
         }
     </script>
